@@ -1,10 +1,16 @@
 # Calculadora de Gorjeta
-Este é um aplicativo Android nativo desenvolvido em Kotlin. O principal objetivo do projeto é simplificar o cálculo de gorjetas e a divisão da conta entre os participantes. O usuário fornece os dados necessários, e o aplicativo calcula e exibe os resultados na tela seguinte.
+## 📖 **Descrição**
+A **Calculadora de Gorjeta** é um aplicativo Android nativo desenvolvido em Kotlin, projetado para simplificar o cálculo de gorjetas e a divisão da conta entre amigos. Com uma interface amigável, o usuário insere os dados necessários e obtém rapidamente os resultados, tornando o processo de pagamento mais simples e eficiente.
 
-## :camera_flash: Screenshots
+## 📸 Screenshots
 <img src="https://github.com/user-attachments/assets/b2c9947e-71a5-40eb-ab1b-8648e20574ec" width=260/> <img src="https://github.com/user-attachments/assets/e1d1758b-f08f-4c55-bbc7-ae11b6f2834d" width=260/>
 
-## Tecnologias
+## ✅ Funcionalidades 
+- **Cálculo de Gorjeta:** Insira o valor da conta e a porcentagem de gorjeta desejada.
+- **Divisão de Conta:** Permite dividir o total entre os participantes.
+- **Resultados Visuais:** Resultado apresentado em uma tela dedicada, facilitando a compreensão.
+
+## 🛠️ Tecnologias Utilizadas 
 - Activity
 - Intent
 - Snackbar
@@ -12,8 +18,14 @@ Este é um aplicativo Android nativo desenvolvido em Kotlin. O principal objetiv
   - ConstraintLayout
   - LinearLayout
   - TableLayout
+- Views
+	- Button
+	- EditText
+	- ImageView
+ 	- TableRow
+	- TextView
 	
-## License
+## 📜 Licença
 ```
 The MIT License (MIT)
 
