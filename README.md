@@ -1,31 +1,26 @@
 # Calculadora de Gorjeta
 ## 📖 **Descrição**
-A **Calculadora de Gorjeta** é um aplicativo Android nativo desenvolvido em Kotlin, projetado para simplificar o cálculo de gorjetas e a divisão da conta entre amigos. Com uma interface amigável, o usuário insere os dados necessários e obtém rapidamente os resultados, tornando o processo de pagamento mais simples e eficiente.
+A **Calculadora de Gorjeta** é um aplicativo Android nativo, desenvolvido em Kotlin, projetado para facilitar o cálculo de gorjetas e a divisão de contas entre amigos. Com uma interface intuitiva, o aplicativo permite que os usuários insiram o valor da conta, o número de pessoas e o percentual da gorjeta. Dessa forma, o processo de pagamento se torna mais rápido, prático e eficiente, eliminando a necessidade de cálculos manuais e possíveis erros ao dividir a conta.
 
-## 📸 Screenshots
-<img src="https://github.com/user-attachments/assets/b2c9947e-71a5-40eb-ab1b-8648e20574ec" width=260/> <img src="https://github.com/user-attachments/assets/e1d1758b-f08f-4c55-bbc7-ae11b6f2834d" width=260/>
+## 📱 Screenshots
+<img src="https://github.com/user-attachments/assets/133f42a3-4e39-4705-8884-4b731c972c2a" width=260/> <img src="https://github.com/user-attachments/assets/a05a09d9-54f5-4128-a2a5-25349d127bb2" width=260/>
 
-## ✅ Funcionalidades 
+## 🎯 Funcionalidades 
 - **Cálculo de Gorjeta:** Insira o valor da conta e a porcentagem de gorjeta desejada.
-- **Divisão de Conta:** Permite dividir o total entre os participantes.
-- **Resultados Visuais:** Resultado apresentado em uma tela dedicada, facilitando a compreensão.
+- **Divisão de Conta:** Permite dividir o total da conta entre os participantes.
+- **Interface Intuitiva:** Design amigável que proporciona uma navegação simples e direta.
+- **Resultados Visuais:** Exibição clara e objetiva dos resultados em uma tela dedicada.
+
+## 🌐 Suporte a Idiomas
+- Português 🇧🇷
+- Inglês 🇺🇸
 
 ## 🛠️ Tecnologias Utilizadas 
-- Activity
-- Intent
-- Snackbar
-- ViewGroups
-  - ConstraintLayout
-  - LinearLayout
-  - TableLayout
-- Views
-	- Button
-	- EditText
-	- ImageView
- 	- TableRow
-	- TextView
+- **Linguagem:** Kotlin
+- **Componentes:** Activity, Intent, Snackbar, ViewGroups (ConstraintLayout, LinearLayout, TableLayout)
+- **UI Elements:** Button, EditText, ImageView, TableRow, TextView
 	
-## 📜 Licença
+## 📄 Licença
 ```
 The MIT License (MIT)
 
