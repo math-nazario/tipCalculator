@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tipcalculator.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -28,20 +29,27 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnCalculate.setOnClickListener {
-            val totalTableTemp = binding.tieTotal.text
-            val numPeopleTemp = binding.tieNumPeople.text
-            val percentageTemp = binding.tiePercentage.text
-            if (totalTableTemp?.isEmpty() == true || numPeopleTemp?.isEmpty() == true || percentageTemp?.isEmpty() == true) {
-                Snackbar.make(binding.tieTotal, "Preencha todos os campos", Snackbar.LENGTH_LONG)
+            val totalTable = binding.tieTotal.text.toString().toDoubleOrNull()
+            val numPeople = binding.tieNumPeople.text.toString().toIntOrNull()
+            val percentage = binding.tiePercentage.text.toString().toIntOrNull()
+
+            if (totalTable == null || numPeople == null || percentage == null) {
+                val messageEmptyField = getString(R.string.message_empty_field)
+                Snackbar.make(binding.tieTotal, messageEmptyField, Snackbar.LENGTH_LONG)
+                    .show()
+            } else if (!isValidValue(totalTable) || !isValidValue(numPeople.toDouble()) || !isValidPercentage(
+                    percentage
+                )
+            ) {
+                val messageZeroField = getString(R.string.message_zero_field)
+                Snackbar.make(binding.tieTotal, messageZeroField, Snackbar.LENGTH_LONG)
                     .show()
             } else {
-                val totalTable: Float = totalTableTemp.toString().toFloat()
-                val numPeople: Int = numPeopleTemp.toString().toInt()
-                val percentage: Int = percentageTemp.toString().toInt()
-
-                val tipTotal = totalTable * percentage / 100
-                val totalWithTip = totalTable + tipTotal
-                val totalPerPerson = totalWithTip / numPeople
+                val (tipTotal, totalWithTip, totalPerPerson) = calculateValues(
+                    totalTable,
+                    numPeople,
+                    percentage
+                )
 
                 val intent = Intent(this, SummaryActivity::class.java)
                 intent.apply {
@@ -59,10 +67,33 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun calculateValues(
+        totalTable: Double,
+        numPeople: Int,
+        percentage: Int
+    ): Triple<Double, Double, Double> {
+        val tipTotal = totalTable * percentage / 100
+        val totalWithTip = totalTable + tipTotal
+        val totalPerPerson = totalWithTip / numPeople
+        return Triple(tipTotal, totalWithTip, totalPerPerson)
+    }
+
+    private fun isValidPercentage(percentage: Int): Boolean {
+        return percentage in 0..100
+    }
+
+    private fun isValidValue(value: Double): Boolean {
+        return value > 0
+    }
+
+    private fun TextInputEditText.clearText() {
+        this.setText("")
+    }
+
     private fun reset() {
-        binding.tieTotal.setText("")
-        binding.tieNumPeople.setText("")
-        binding.tiePercentage.setText("")
+        binding.tieTotal.clearText()
+        binding.tieNumPeople.clearText()
+        binding.tiePercentage.clearText()
 
         binding.tieTotal.requestFocus()
     }

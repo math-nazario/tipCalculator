@@ -21,12 +21,12 @@ class SummaryActivity : AppCompatActivity() {
             insets
         }
 
-        val totalTable = intent.getFloatExtra("totalTable", 0.0f)
+        val totalTable = intent.getDoubleExtra("totalTable", 0.0)
         val numPeople = intent.getIntExtra("numPeople", 0)
         val percentage = intent.getIntExtra("percentage", 0)
-        val totalWithTip = intent.getFloatExtra("totalWithTip", 0.0f)
-        val totalAmount = intent.getFloatExtra("totalAmount", 0.0f)
-        val tip = intent.getFloatExtra("tip", 0.0f)
+        val totalWithTip = intent.getDoubleExtra("totalWithTip", 0.0)
+        val totalAmount = intent.getDoubleExtra("totalAmount", 0.0)
+        val tip = intent.getDoubleExtra("tip", 0.0)
 
         binding.tvTotalTable.text = "R$ ${"%.2f".format(totalTable)}"
         binding.tvNumPeople.text = numPeople.toString()

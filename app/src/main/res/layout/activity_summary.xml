@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/values_card"
+        android:background="@drawable/light_green_bg"
         android:elevation="8dp"
         android:orientation="vertical"
         android:padding="16dp"
@@ -38,7 +38,7 @@
 
             <TextView
                 android:id="@+id/tvTotalTableLabel"
-                style="@style/TextViewDescriptionValues"
+                style="@style/TextViewDescriptionLabelValues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -63,7 +63,7 @@
 
             <TextView
                 android:id="@+id/tvNumPeopleLabel"
-                style="@style/TextViewDescriptionValues"
+                style="@style/TextViewDescriptionLabelValues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -90,7 +90,7 @@
 
             <TextView
                 android:id="@+id/tvPercentageLabel"
-                style="@style/TextViewDescriptionValues"
+                style="@style/TextViewDescriptionLabelValues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -115,11 +115,11 @@
     <View
         android:id="@+id/viewSeparator"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="3dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="@color/gray"
+        android:background="@color/light_gray"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -150,7 +150,7 @@
 
         <TextView
             android:id="@+id/tvTotalWithTip"
-            style="@style/Result"
+            style="@style/TextViewResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +169,7 @@
 
         <TextView
             android:id="@+id/tvTotalAmount"
-            style="@style/Result"
+            style="@style/TextViewResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,7 +188,7 @@
 
         <TextView
             android:id="@+id/tvTotalTip"
-            style="@style/Result"
+            style="@style/TextViewResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +201,7 @@
         style="@style/Button"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:background="@drawable/primary_button_bg"
+        android:background="@drawable/dark_green_bg"
         android:text="@string/summary_recalculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

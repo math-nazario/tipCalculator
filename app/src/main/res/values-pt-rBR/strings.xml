@@ -2,10 +2,16 @@
 <resources>
     <string name="app_name">Calculadora de Gorjeta</string>
 
+    <string name="message_empty_field">Preencha todos os campos</string>
+    <string name="message_zero_field">O valor deve ser maior que 0</string>
+
     <string name="main_title">Calculadora de Gorjeta</string>
     <string name="main_bill_amount">Digite o valor da conta</string>
+    <string name="main_bill_amount_hint">100,00</string>
     <string name="main_number_of_people">Digite a quantidade de pessoas</string>
+    <string name="main_number_of_people_hint">2</string>
     <string name="main_tip_percentage">Digite o percentual de gorjeta</string>
+    <string name="main_tip_percentage_hint">10</string>
     <string name="main_reset">Limpar</string>
     <string name="main_calculate">Calcular</string>
 
